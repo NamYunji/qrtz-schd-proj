@@ -1,0 +1,7 @@
+{
+	"agentId": "NYJ-1",
+	"scheduleId": "ITEM-001",
+	"scheduleGroup": "ITEM-SCHEDULE",
+	"scheduleOperation": "RUN_ONCE",
+	"scheduleDescription": "Schedule for ITEM-001"
+}
