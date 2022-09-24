@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "ip.command",
+      "type": "com.qrtz.schd.CommandProperties",
+      "sourceType": "com.qrtz.schd.CommandProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ip.command.schedule-file",
+      "type": "java.lang.String",
+      "sourceType": "com.qrtz.schd.CommandProperties"
+    }
+  ],
+  "hints": []
+}

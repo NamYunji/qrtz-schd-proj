@@ -1,0 +1,57 @@
+# File Directory
+ip:
+  command:
+    schedule-file: commander/schedule
+######################################################################
+# Logging
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+######################################################################
+# Spring Boot
+spring:
+  devtools:
+    livereload:
+      port: 35730
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: 
+    username: 
+    password: 
+    hikari:
+      maximum-pool-size: 4
+  h2:
+    console:
+      enabled: true
+  quartz:
+    scheduler-name: ITEMScheduler
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: ITEMScheduler
+            instanceId: ITEMSchedulerInstance
+          threadPool:
+            threadCount: 10
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_ 
+            useProperties: true
+            isClustered : true
+            misfireThreshold: 600000
+######################################################################
+# Apache Camel - Kafka Component
+camel:
+  component:
+    kafka:
+      allow-manual-commit: true
+      auto-commit-enable: false
+      autoOffsetReset: earliest
+      shutdown-timeout: 10
+      brokers: 
